@@ -1,0 +1,34 @@
+body{
+    
+    margin-top: 60px;
+    background-color: #282828;
+}
+
+
+h1{ 
+
+    color: white;
+}
+
+
+form{
+
+    margin-top: 50px;
+}
+
+
+select, option, input{
+
+    font-weight: 700;
+}
+
+
+button{
+    
+    cursor: pointer;
+}
+
+.result{
+
+    color:green;
+}
