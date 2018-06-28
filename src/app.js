@@ -6,6 +6,7 @@ navigator.serviceWorker.register('./sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
         return;
     }
+    console.log('yay');
 });
 // initialize a database
 const dbPromise = idb.open('currency-converter', 2, function(upgradeDb) {
