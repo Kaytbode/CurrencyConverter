@@ -6,7 +6,7 @@ self.addEventListener('install', event=> {
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
             './src/app.js',
-            './index.html',
+            '/CurrencyConverter/blob/master/index.html',
             './index.css',
             "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
             ]);
