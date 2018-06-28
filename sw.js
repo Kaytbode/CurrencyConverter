@@ -5,9 +5,9 @@ self.addEventListener('install', event=> {
     event.waitUntil(
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
-            'src/app.js',
-            'index.html',
-            'index.css',
+            './src/app.js',
+            './index.html',
+            './index.css',
             "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
             ]);
       })
