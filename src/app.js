@@ -2,7 +2,7 @@
 import idb from "idb";
 
 // register a service worker
-navigator.serviceWorker.register('sw.js').then(function(reg) {
+navigator.serviceWorker.register('./sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
         return;
     }
