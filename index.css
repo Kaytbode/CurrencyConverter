@@ -11,13 +11,23 @@ h1{
 }
 
 
+p{
+    
+    color: tomato;
+    font-size: 2.5rem;
+    font-family: 'Tangerine', cursive;
+}
+
+
 form{
 
     margin-top: 50px;
 }
 
 
-select, option, input{
+select, 
+option, 
+input{
 
     font-weight: 700;
 }
