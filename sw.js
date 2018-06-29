@@ -8,7 +8,6 @@ self.addEventListener('install', event=> {
                 'https://kaytbode.github.io/CurrencyConverter/',            
                 'https://kaytbode.github.io/CurrencyConverter/src/app.js',
                 'https://kaytbode.github.io/CurrencyConverter/bundle.js',
-                'https://kaytbode.github.io/CurrencyConverter/test.js',
                 'https://kaytbode.github.io/CurrencyConverter/index.html',
                 'https://kaytbode.github.io/CurrencyConverter/index.css',
                 "https://fonts.googleapis.com/css?family=Tangerine",
