@@ -7,27 +7,28 @@ body{
 
 .container{
     
-    width: 60%;
+    width: 320px;
+    height: 480px;
 }
 
 
 h1{ 
 
     color: white;
+    font-size: 30px;
 }
 
 
 p{
     
     color: #ffc300;
-    font-size: 2.5rem;
+    font-size: 2em;
     font-family: 'Tangerine', cursive;
 }
 
 /*result to display*/
 .display{
 
-    width: 60%;
     margin: auto;
     margin-bottom: 40px;
 }
@@ -39,7 +40,7 @@ p{
     background-color: #282828;
     border: 0;
     font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /*select, and inputs*/
