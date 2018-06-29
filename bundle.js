@@ -8,7 +8,7 @@ var _idb2 = _interopRequireDefault(_idb);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // register a service worker
-navigator.serviceWorker.register('sw.js').then(function (reg) {
+navigator.serviceWorker.register('./sw.js').then(function (reg) {
     if (!navigator.serviceWorker.controller) {
         return;
     }
@@ -100,7 +100,7 @@ button.onclick = function (event) {
         return res.json();
     }).then(function (data) {
         amount *= data[query]['val'];
-        result.value = amount;
+        result.value = '' + to + amount;
         dbPromise.then(function (db) {
             var store = db.transaction('conversion', 'readwrite').objectStore('conversion');
             store.put(data[query]['val'], query);
@@ -111,7 +111,7 @@ button.onclick = function (event) {
             return store.get(query);
         }).then(function (value) {
             amount *= value;
-            result.value = amount ? amount : 'Unavailable';
+            result.value = amount ? '' + to + amount : 'Unavailable';
         });
     });
 };
