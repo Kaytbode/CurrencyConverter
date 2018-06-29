@@ -3,3 +3,4 @@ export function addTextToBody(text) {
     div.textContent = text;
     document.body.appendChild(div);
   }
+  
