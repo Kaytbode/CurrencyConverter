@@ -5,6 +5,12 @@ body{
 }
 
 
+.container{
+    
+    width: 60%;
+}
+
+
 h1{ 
 
     color: white;
@@ -13,15 +19,34 @@ h1{
 
 p{
     
-    color: tomato;
+    color: #ffc300;
     font-size: 2.5rem;
     font-family: 'Tangerine', cursive;
 }
 
+/*result to display*/
+.display{
 
-form{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 40px;
+}
 
-    margin-top: 50px;
+
+#result{
+
+    color: greenyellow;
+    background-color: #282828;
+    border: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 2em;
+}
+
+/*select, and inputs*/
+.amount,
+.input-group{
+    
+    margin-bottom: 40px;
 }
 
 
@@ -33,12 +58,31 @@ input{
 }
 
 
-button{
-    
-    cursor: pointer;
+.from{
+
+    margin-right: 2em;
 }
 
-.result{
+/*Button*/
+.button-div{
+    
+    margin: auto;
+}
 
-    color:green;
+
+.btn{
+    
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+    background-color: #3374ff;
+}
+
+
+.btn:hover,
+.btn.hover{
+
+    background-color: green;
 }
