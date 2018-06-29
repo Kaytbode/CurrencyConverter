@@ -6,7 +6,6 @@ navigator.serviceWorker.register('./sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
         return;
     }
-    console.log('yay');
 });
 // initialize a database
 const dbPromise = idb.open('currency-converter', 2, function(upgradeDb) {
@@ -94,7 +93,7 @@ button.onclick = event=>{
         return res.json();
     }).then(data=>{
         amount *= data[query]['val'];
-        result.value = amount;
+        result.value = `${to}${amount}`;
         dbPromise.then(db=>{
             const store= db.transaction('conversion', 'readwrite')
                             .objectStore('conversion');
@@ -106,7 +105,7 @@ button.onclick = event=>{
             return store.get(query);
         }).then(value=>{
             amount *= value;
-            result.value = amount? amount : 'Unavailable';
+            result.value = amount? `${to}${amount}` : 'Unavailable';
         });
     });
 };
