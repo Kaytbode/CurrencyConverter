@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -6,7 +6,8 @@
     <title>Currency Converter</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet"> 
     <link rel="stylesheet" href="index.css">        
 </head>
 <body>
@@ -14,18 +15,25 @@
         <h1 class="text-center">Currency Converter</h1>
         <p class="text-center">...Works online and offline</p>
         <form>
+            <div class="display">   
+                <input type="text" class="form-control result text-center" 
+                    aria-label="Username" id="result" aria-describedby="basic-addon1" disabled> 
+            </div>
+            <div class="amount">
+                <input type="text" class="form-control text-center" placeholder="Amount to convert" 
+                        aria-label="Username" id="amount" aria-describedby="basic-addon1">
+            </div>  
             <div class="input-group">
-                <select class="custom-select" id="from">
-                        <option value="none" selected>--Choose a currency--</option>
+                <select class="custom-select from" id="from">
+                        <option value="none" selected>From</option>
                 </select>
-                <input type="text" class="form-control" placeholder="Amount to convert" 
-                    aria-label="Username" id="amount" aria-describedby="basic-addon1">
-                <button type="button" class="btn btn-dark">Converts to</button>
+        
                 <select class="custom-select" id="to">
-                        <option value="none" selected>--Choose a currency--</option>
+                        <option value="none" selected>To</option>
                 </select> 
-                <input type="text" class="form-control result" 
-                 aria-label="Username" id="result" aria-describedby="basic-addon1" disabled> 
+            </div>
+            <div class="button-div">
+                <button type="button" class="btn">Convert</button>
             </div>
         </form>
     </div>
