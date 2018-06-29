@@ -12,7 +12,6 @@ navigator.serviceWorker.register('./sw.js').then(function (reg) {
     if (!navigator.serviceWorker.controller) {
         return;
     }
-    console.log('yay');
 });
 // initialize a database
 var dbPromise = _idb2.default.open('currency-converter', 2, function (upgradeDb) {
