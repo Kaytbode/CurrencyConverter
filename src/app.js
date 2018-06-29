@@ -1,5 +1,5 @@
 
-import idb from "idb";
+import idb from "./node_modules/idb";
 
 // register a service worker
 navigator.serviceWorker.register('./sw.js').then(function(reg) {
