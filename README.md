@@ -1,8 +1,7 @@
 # Currency Converter
-Converts a value in one currency to another.**Works offline**.
-
+Converts a currency value to another.**Works offline**. 
 Service worker and the cache API were employed to provide the application's offline capabilities. 
----
+
 ## Installing
 [Currency Converter](https://kaytbode.github.io/CurrencyConverter/);
 
