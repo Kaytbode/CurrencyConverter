@@ -36,7 +36,7 @@ fetch(currUrl).then(res=>{
               store.put(currencies[currency]);               
             }
         }
-    })
+})
 });
 
 // get the values for the option tag through the database

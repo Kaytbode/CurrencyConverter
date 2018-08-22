@@ -1,89 +1,56 @@
-body{
-    
-    margin-top: 60px;
+body { 
     background-color: #282828;
+    margin: 0;
+    padding: 0;
 }
 
-
-.container{
-    
-    width: 320px;
-    height: 480px;
+form {
+    margin: 20px auto;
 }
 
-
-h1{ 
-
-    color: white;
-    font-size: 30px;
+.container {
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+    margin: auto;
+    width: 90%;
+    min-width: 300px;
+    min-height: 500px;
+    max-width: 500px;
 }
 
+.from,
+.to {
+    display: flex;
+}
 
-p{
-    
-    color: #ffc300;
+.convert {
+    margin: auto;
+}
+
+button {
+    font-size: 3em;
+    border: none;
+    color: green;
+    background-color: inherit;
+}
+
+select {
+    width: 40%;
+    border: none;
     font-size: 2em;
-    font-family: 'Tangerine', cursive;
+    background-color: inherit;
+    color: #D7B384;
 }
 
-/*result to display*/
-.display{
-
-    margin: auto;
-    margin-bottom: 40px;
+option {
+    text-align: center;
 }
 
-
-#result{
-
-    color: greenyellow;
-    background-color: #282828;
-    border: 0;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 1.5em;
-}
-
-/*select, and inputs*/
-.amount,
-.input-group{
-    
-    margin-bottom: 40px;
-}
-
-
-select, 
-option, 
-input{
-
-    font-weight: 700;
-}
-
-
-.from{
-
-    margin-right: 2em;
-}
-
-/*Button*/
-.button-div{
-    
-    margin: auto;
-}
-
-
-.btn{
-    
-    cursor: pointer;
-    width: 100%;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: white;
-    background-color: #3374ff;
-}
-
-
-.btn:hover,
-.btn.hover{
-
-    background-color: green;
+input {
+    width: 60%;
+    border: none;
+    font-size: 2em;
+    padding: 0 1em;
+    background-color: #383737;
+    color: #C7C7FF;
 }
