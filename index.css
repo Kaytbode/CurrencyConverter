@@ -42,10 +42,6 @@ select {
     color: #D7B384;
 }
 
-option {
-    text-align: center;
-}
-
 input {
     width: 60%;
     border: none;
