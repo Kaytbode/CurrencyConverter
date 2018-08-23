@@ -1,18 +1,15 @@
 
-const staticCacheName = 'currency-converter-v2';
+const staticCacheName = 'currency-converter-v1';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
-                'https://kaytbode.github.io/CurrencyConverter/',            
-                'https://kaytbode.github.io/CurrencyConverter/src/app.js',
-                'https://kaytbode.github.io/CurrencyConverter/bundle.js',
-                'https://kaytbode.github.io/CurrencyConverter/index.html',
-                'https://kaytbode.github.io/CurrencyConverter/index.css',
+                '/',            
+                '/src/app.js',
+                '/index.css',
                 "https://fonts.googleapis.com/css?family=Tangerine",
                 "https://fonts.googleapis.com/css?family=PT+Sans+Narrow",
-                "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
             ]);
       })
     );

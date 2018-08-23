@@ -1,6 +1,4 @@
 
-import idb from 'idb';
-
 // register a service worker
 navigator.serviceWorker.register('./sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
@@ -81,7 +79,7 @@ button.onclick = event=>{
           query = `${from}_${to}`,
           url = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=y`;
     
-    result.value = 'loading value ....';
+    result.textContent = 'loading value ....';
     
     if(amount < 0 || !amount){
         result.value = 'Input a positive value';
@@ -93,7 +91,7 @@ button.onclick = event=>{
         return res.json();
     }).then(data=>{
         amount *= data[query]['val'];
-        result.value = `${to}${amount}`;
+        result.textContent = `${amount.toFixed(4)}`;
         dbPromise.then(db=>{
             const store= db.transaction('conversion', 'readwrite')
                             .objectStore('conversion');
@@ -105,7 +103,8 @@ button.onclick = event=>{
             return store.get(query);
         }).then(value=>{
             amount *= value;
-            result.value = amount? `${to}${amount}` : 'Unavailable';
+            result.textContent = amount? `${amount.toFixed(4)}` : 'Unavailable';
         });
     });
 };
+

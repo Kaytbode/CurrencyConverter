@@ -14,24 +14,29 @@ form {
     margin: auto;
     width: 90%;
     min-width: 300px;
-    min-height: 500px;
+    min-height: 550px;
     max-width: 500px;
 }
 
 .from,
 .to {
     display: flex;
+    margin: 1em 0;
 }
 
 .convert {
     margin: auto;
+    background-color:#D7B384;
+    padding: 1em 2em;
 }
 
 button {
-    font-size: 3em;
+    font-size: 2em;
     border: none;
-    color: green;
+    color: #282828;
+    font-weight: 700;
     background-color: inherit;
+    cursor: pointer;
 }
 
 select {
@@ -42,11 +47,21 @@ select {
     color: #D7B384;
 }
 
-input {
+option {
+    background-color: #282828;
+}
+
+
+input,
+span {
     width: 60%;
     border: none;
     font-size: 2em;
     padding: 0 1em;
     background-color: #383737;
     color: #C7C7FF;
+}
+
+span {
+    padding-top: 2.4em;
 }
