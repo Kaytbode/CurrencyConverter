@@ -85,7 +85,7 @@ const convertCurrPairs = (event)=>{
     
     //Validate user input
     if(!regExp.test(amount)){
-        result.value = 'Input a positive value';
+        result.textContent = 'Input a positive value';
         return;
     }
     amount = Number(amount);
