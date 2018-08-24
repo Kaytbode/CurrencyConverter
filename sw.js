@@ -1,5 +1,5 @@
 
-const staticCacheName = 'currency-converter-v2';
+const staticCacheName = 'currency-converter-v3';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
@@ -7,6 +7,7 @@ self.addEventListener('install', event=> {
             return cache.addAll([
                 'https://kaytbode.github.io/CurrencyConverter/',            
                 'https://kaytbode.github.io/CurrencyConverter/src/app.js',
+                'https://kaytbode.github.io/CurrencyConverter/src/a2hs.js',
                 'https://kaytbode.github.io/CurrencyConverter/index.css',
                 "https://fonts.googleapis.com/css?family=Tangerine",
                 "https://fonts.googleapis.com/css?family=PT+Sans+Narrow",

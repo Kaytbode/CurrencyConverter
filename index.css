@@ -65,3 +65,11 @@ span {
 span {
     padding-top: 2.4em;
 }
+
+#a2HS {
+    background-color: #D7B384;
+    color: #282828;
+    font-size: 1em;
+    padding: 1em;
+    display: none;
+}
