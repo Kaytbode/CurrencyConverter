@@ -20,11 +20,10 @@ self.addEventListener('activate', event=>{
     event.waitUntil(
         caches.keys().then(cacheNames=>{
             return Promise.all(
-                cacheNames.map(cacheName=>{
-                    if(cacheWhiteList.indexOf(cacheName) == -1){
-                        return caches.delete(cacheName);
-                    }
-                })
+                cacheNames.filter(cacheName=>{
+                    return cacheName.startsWith('currency-converter-')&&
+                          cacheWhiteList.indexOf(cacheName) == -1
+                }).map(cacheName=> caches.delete(cacheName))
             );
         })
     );
