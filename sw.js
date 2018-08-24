@@ -6,8 +6,8 @@ self.addEventListener('install', event=> {
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
                 '/',            
-                'CurrencyConverter/src/app.js',
-                'CurrencyConverter/index.css',
+                'https://kaytbode.github.io/CurrencyConverter/src/app.js',
+                'https://kaytbode.github.io/CurrencyConverter/index.css',
                 "https://fonts.googleapis.com/css?family=Tangerine",
                 "https://fonts.googleapis.com/css?family=PT+Sans+Narrow",
             ]);
