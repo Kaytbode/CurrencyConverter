@@ -117,5 +117,5 @@ const convertCurrPairs = (event)=>{
 }
 
 //click the button to get a conversion rate
-const button = document.querySelector('button');
-button.addEventListener('click', convertCurrPairs, true);
+ const button = document.getElementById('convert');
+ button.addEventListener('click', convertCurrPairs);
