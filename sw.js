@@ -1,5 +1,5 @@
 
-const staticCacheName = 'currency-converter-v5';
+const staticCacheName = 'currency-converter-v6';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
