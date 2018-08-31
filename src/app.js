@@ -73,7 +73,6 @@ const loadCurrencies = ()=>{
 const convertCurrPairs = (event)=>{
     event.preventDefault();
 
-    const regExp = /^[0-9]+$/;
     let  amount =  document.getElementById('amount').value;
     const result = document.getElementById('result'),
           from = encodeURIComponent(document.getElementById('from').value),
@@ -83,13 +82,6 @@ const convertCurrPairs = (event)=>{
     
     result.textContent = 'loading value ....';
     
-    //Validate user input
-    if(!regExp.test(amount)){
-        result.textContent = 'Input a positive value';
-        return;
-    }
-    amount = Number(amount);
-
    // get the result of query from the network
    // if no connection, get it from the database, if available
    if(navigator.onLine){
