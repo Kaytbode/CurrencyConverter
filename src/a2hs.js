@@ -2,7 +2,7 @@
 //https://developers.google.com/web/fundamentals/app-install-banners/
 
 let deferredPrompt;
-const a2HS = document.getElementById('a2HS');
+const a2HS = document.querySelector('.a2HS');
 
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt

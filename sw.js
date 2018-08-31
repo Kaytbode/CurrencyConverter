@@ -1,16 +1,18 @@
 
-const staticCacheName = 'currency-converter-v7';
+const staticCacheName = 'currency-converter-v9';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
-                'https://kaytbode.github.io/CurrencyConverter/',            
-                'https://kaytbode.github.io/CurrencyConverter/src/app.js',
-                'https://kaytbode.github.io/CurrencyConverter/src/a2hs.js',
-                'https://kaytbode.github.io/CurrencyConverter/index.css',
+                '/',
+                '/page404.html',           
+                '/src/app.js',
+                '/src/a2hs.js',
+                '/index.css',
                 "https://fonts.googleapis.com/css?family=Tangerine",
                 "https://fonts.googleapis.com/css?family=PT+Sans+Narrow",
+                "https://fonts.googleapis.com/css?family=Hind"
             ]);
       })
     );
@@ -33,7 +35,14 @@ self.addEventListener('activate', event=>{
 self.addEventListener('fetch', event=>{
     event.respondWith(
         caches.match(event.request).then(response=> {
-          return response || fetch(event.request);
+            if(response) return response
+            
+            return fetch(event.request).then(response=>{
+                if(response.status === 404){
+                    return caches.match('/page404.html');
+                }
+                return response;
+            });
         })
     );    
 });
