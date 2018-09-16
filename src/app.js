@@ -59,7 +59,7 @@ const loadCurrencies = ()=>{
                 
                 child.setAttribute('value', symbol['id']);
             
-                child.textContent = symbol['id'];
+                child.textContent = `${symbol.currencyName} - ${symbol['id']}`;
                 duplicate = child.cloneNode(true);
         
                 selectElements[0].appendChild(child);

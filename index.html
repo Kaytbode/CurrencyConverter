@@ -6,30 +6,34 @@
     <meta name="theme-color" content="#D7B384">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Currency Converter</title>
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans+Condensed:400|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="index.css"> 
     <link rel="manifest" href="./manifest.json">       
 </head>
 <body>
     <button class="a2HS">Add to Homescreen</button>
-    <main> 
+    <header>
+        <h1>Swap Exchange</h1>
+    </header>
+    <main>
         <form> 
             <div class="container">
-                <div class="from">
+                <div class="choose-currency">
                     <select id="from" aria-label="Choose a currency">
-                        <option value="NGN" selected>NGN</option>
+                        <option value="NGN" selected>Nigerian Naira - NGN</option>
                     </select>
-                    <input type="number" id="amount" maxlength="7" aria-label="input the value to convert">
                 </div>
-                
-                <div class="to">
+                <div>
+                    <input type="number" id="amount" maxlength="7" aria-label="input the value to convert">
+                </div>               
+                <div class="choose-currency">
                     <select id="to" aria-label="Choose a currency">
-                        <option value="USD" selected>USD</option>
-                    </select> 
+                        <option value="USD" selected>United States Dollar - USD</option>
+                    </select>
+                </div>
+                <div>
                     <span id="result" aria-live="assertive"></span>
                 </div>
-
                 <div class="convert">
                     <button aria-controls="result" id="convert">CONVERT</button>
                 </div>
