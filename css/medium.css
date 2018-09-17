@@ -8,7 +8,7 @@ header {
      "inp inp spa spa"
      "but but but but";
 
-    grid-template-columns: 25%;
+    grid-template-columns: 185px;
     grid-gap: 5px;
     grid-column-gap: 10px;
     padding: 10px;
@@ -24,6 +24,7 @@ header {
 }
 
 .amount {
+    box-sizing: border-box;
     grid-area: inp;
 }
 
@@ -38,6 +39,7 @@ input:focus {
 }
 
 .result-box {
+    box-sizing: border-box;
     grid-area: spa;
     font-size: 54pt;
     height: 200px;

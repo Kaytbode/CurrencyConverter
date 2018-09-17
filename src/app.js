@@ -80,7 +80,7 @@ const convertCurrPairs = (event)=>{
           query = `${from}_${to}`,
           url = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=y`;
     
-    result.textContent = 'loading ...';
+    result.textContent = ' ...';
     
    // get the result of query from the network
    // if no connection, get it from the database, if available
@@ -95,7 +95,7 @@ const convertCurrPairs = (event)=>{
                                 .objectStore('conversion');
                 store.put(data[query]['val'], query);
             });
-        }).catch(()=> result.textContent = 'Rate Unavailable');
+        }).catch(()=> result.textContent = '📶');
     }   
     else { // for offline use
         dbPromise.then(db=>{
@@ -103,7 +103,7 @@ const convertCurrPairs = (event)=>{
             return store.get(query);
         }).then(value=>{
             amount *= value;
-            result.textContent = amount? `${amount.toFixed(4)}` : 'Unavailable';
+            result.textContent = amount? `${amount.toFixed(4)}` : '📶';
         });
     }       
 }

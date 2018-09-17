@@ -66,6 +66,7 @@ input,
 input:focus {
     outline: none;
     border-top-color: #8F008F;
+    border-top-width: 2px;
 }
 
 span {
@@ -96,12 +97,13 @@ button:hover {
     outline: none;
     background-color: #00D600;
 }
-/* Necessary to remove dotted lines on firefox browser */
+/* Necessary to remove dotted lines during focus on firefox browser */
 button::-moz-focus-inner,
-select::-moz-focus-inner {
+select::-moz-focus-inner{
     border: 0;
 }
 
+/* Add to homescreen button */
 .a2HS {
     background-color: #D7B384;
     color: #282828;
