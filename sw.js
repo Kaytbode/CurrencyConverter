@@ -1,5 +1,5 @@
 
-const staticCacheName = 'currency-converter-v10';
+const staticCacheName = 'currency-converter-v11';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
@@ -9,8 +9,9 @@ self.addEventListener('install', event=> {
                 '/page404.html',           
                 '/src/app.js',
                 '/src/a2hs.js',
-                '/index.css',
-                "https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway",
+                'css/main.css',
+                'css/medium.css',
+                'https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway'
 
             ]).then(()=> self.skipWaiting())
       })
