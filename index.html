@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#D7B384">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Currency Converter</title>
-    <link href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans+Condensed:400|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="index.css"> 
     <link rel="manifest" href="./manifest.json">       
 </head>
@@ -16,7 +16,7 @@
         <h1>Swap Exchange</h1>
     </header>
     <main>
-        <form> 
+        <form>
             <div class="container">
                 <div class="choose-currency">
                     <select id="from" aria-label="Choose a currency">
@@ -24,20 +24,20 @@
                     </select>
                 </div>
                 <div>
-                    <input type="number" id="amount" maxlength="7" aria-label="input the value to convert">
-                </div>               
+                    <input type="number" id="amount" maxlength="7" min="1" aria-label="input the value to convert">
+                </div>          
                 <div class="choose-currency">
                     <select id="to" aria-label="Choose a currency">
                         <option value="USD" selected>United States Dollar - USD</option>
                     </select>
                 </div>
-                <div>
+                <div class="result-box">
                     <span id="result" aria-live="assertive"></span>
                 </div>
                 <div class="convert">
-                    <button aria-controls="result" id="convert">CONVERT</button>
+                    <button aria-controls="result" id="convert">EXCHANGE</button>
                 </div>
-            </div>  
+            </div>
         </form>
     </main>
     <script src="sw.js"></script>
