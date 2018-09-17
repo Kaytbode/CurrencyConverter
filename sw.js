@@ -9,8 +9,8 @@ self.addEventListener('install', event=> {
                 '/page404.html',           
                 '/src/app.js',
                 '/src/a2hs.js',
-                'css/main.css',
-                'css/medium.css',
+                '/css/main.css',
+                '/css/medium.css',
                 'https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway'
 
             ]).then(()=> self.skipWaiting())
