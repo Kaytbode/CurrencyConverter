@@ -1,5 +1,5 @@
 
-const staticCacheName = 'currency-converter-v9';
+const staticCacheName = 'currency-converter-v10';
 
 self.addEventListener('install', event=> {
     event.waitUntil(
@@ -10,10 +10,9 @@ self.addEventListener('install', event=> {
                 '/src/app.js',
                 '/src/a2hs.js',
                 '/index.css',
-                "https://fonts.googleapis.com/css?family=Tangerine",
-                "https://fonts.googleapis.com/css?family=PT+Sans+Narrow",
-                "https://fonts.googleapis.com/css?family=Hind"
-            ]);
+                "https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway",
+
+            ]).then(()=> self.skipWaiting())
       })
     );
 });
@@ -30,6 +29,8 @@ self.addEventListener('activate', event=>{
             );
         })
     );
+
+    return self.clients.claim();
 });
 
 self.addEventListener('fetch', event=>{

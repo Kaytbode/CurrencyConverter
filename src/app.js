@@ -95,9 +95,10 @@ const convertCurrPairs = (event)=>{
                                 .objectStore('conversion');
                 store.put(data[query]['val'], query);
             });
+            //we are definitely offline
         }).catch(()=> result.textContent = '📶');
     }   
-    else { // for offline use
+    else { // for offline use or lie-fi
         dbPromise.then(db=>{
             const store = db.transaction('conversion').objectStore('conversion');
             return store.get(query);
