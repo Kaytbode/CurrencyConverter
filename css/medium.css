@@ -1,0 +1,61 @@
+header {
+    font-size: 8pt;
+}
+
+.container {
+    grid-template-areas:
+     "sfr sfr sto sto"
+     "inp inp spa spa"
+     "but but but but";
+
+    grid-template-columns: 25%;
+    grid-gap: 5px;
+    grid-column-gap: 10px;
+    padding: 10px;
+    max-width: 750px;
+}
+
+.from {
+    grid-area: sfr;
+}
+
+.to {
+    grid-area: sto;
+}
+
+.amount {
+    grid-area: inp;
+}
+
+input {
+    font-size: 54pt;
+    height: 200px;
+    border: none;
+}
+
+input:focus {
+    background-color: #eee;
+}
+
+.result-box {
+    grid-area: spa;
+    font-size: 54pt;
+    height: 200px;
+}
+
+span {
+    padding-top: 50px;
+}
+.convert {
+    grid-area: but;
+    text-align: center;
+}
+
+select {
+    font-size: 16pt;
+}
+
+button {
+    width: 50%;
+    font-size: 16pt;
+}

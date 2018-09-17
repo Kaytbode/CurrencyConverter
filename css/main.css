@@ -1,6 +1,7 @@
 body { 
     margin: 40px 0 0;
     padding: 0;
+    background-color: #eee;
 }
 
 header {
@@ -8,10 +9,18 @@ header {
     font-size: 6pt;
     text-align: center;
     color: #694A21;
+    background-color: #fff;
+    padding-top: 20px;
+    border-top: 1px thin #FF8040;
+}
+
+h1 {
+    margin: 0;
 }
 
 main {
-    margin-top: 60px;
+    padding-top: 60px;
+    background-color: #fff;
 }
 
 .container {
@@ -20,6 +29,7 @@ main {
     grid-template-columns: 100%;
     padding: 5px;
     margin: auto;
+    max-width: 350px;
 }
 
 .choose-currency {
@@ -68,6 +78,7 @@ span {
 .convert {
     margin-top: 10px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 button {

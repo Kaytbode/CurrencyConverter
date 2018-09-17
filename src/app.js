@@ -80,7 +80,7 @@ const convertCurrPairs = (event)=>{
           query = `${from}_${to}`,
           url = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=y`;
     
-    result.textContent = 'loading value ....';
+    result.textContent = 'loading ...';
     
    // get the result of query from the network
    // if no connection, get it from the database, if available
