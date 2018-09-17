@@ -5,12 +5,12 @@ self.addEventListener('install', event=> {
     event.waitUntil(
       caches.open(staticCacheName).then(cache=>{
             return cache.addAll([
-                '/',
-                '/page404.html',           
-                '/src/app.js',
-                '/src/a2hs.js',
-                '/css/main.css',
-                '/css/medium.css',
+                '/CurrencyConverter/',
+                '/CurrencyConverter/page404.html',           
+                '/CurrencyConverter/src/app.js',
+                '/CurrencyConverter/src/a2hs.js',
+                '/CurrencyConverter/css/main.css',
+                '/CurrencyConverter/css/medium.css',
                 'https://fonts.googleapis.com/css?family=Poor+Story|Open+Sans+Condensed:400|Raleway'
 
             ]).then(()=> self.skipWaiting())
